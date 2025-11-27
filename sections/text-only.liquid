@@ -1,0 +1,38 @@
+{{ 'text-only.css' | asset_url | stylesheet_tag }}
+<div class="text-only">
+  <h2>Text {{ section.settings.products_per_page }}</h2>
+  {% comment %} <img > {% endcomment %}
+  {%- if section.settings.image != blank -%}
+    {{
+      section.settings.image
+      | image_url: width: 3840
+      | image_tag: height: height, sizes: sizes, widths: widths, fetchpriority: fetch_priority
+    }}
+  {%- endif -%}
+</div>
+<script src="{{ 'text-only.js' | asset_url }}" defer="defer"></script>
+{% schema %}
+{
+  "name": "Text only",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "products_per_page",
+      "label": "Products per page",
+      "default": 20
+    },
+    {
+      "label": "Image",
+      "type": "image_picker",
+      "id": "image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text only"
+    }
+  ]
+}
+{% endschema %}

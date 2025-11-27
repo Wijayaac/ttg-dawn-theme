@@ -8,16 +8,26 @@
  * ------------------------------------------------------------
  */
 {
+  "parent": "product.json",
+  "context": {
+    "market": "indonesia"
+  },
   "sections": {
     "main": {
-      "type": "main-account",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+      "settings": {},
+      "blocks": {},
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share",
+        "text_tXjhDt",
+        "text_pfRdMy"
+      ]
     }
-  },
-  "order": [
-    "main"
-  ]
+  }
 }
