@@ -1,6 +1,8 @@
 {{ 'text-only.css' | asset_url | stylesheet_tag }}
 <div class="text-only">
-  <h2>Text {{ section.settings.products_per_page }}</h2>
+  {%- if section.settings.products_per_page != blank -%}
+    <h2>Text {{ section.settings.products_per_page }}</h2>
+  {%- endif -%}
   {% comment %} <img > {% endcomment %}
   {%- if section.settings.image != blank -%}
     {{
