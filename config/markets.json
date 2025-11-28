@@ -15,7 +15,7 @@
     "canada": {
       "parent": "@default"
     },
-    "indonesia": {
+    "id": {
       "parent": "@default"
     }
   }

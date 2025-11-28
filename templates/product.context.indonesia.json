@@ -10,7 +10,7 @@
 {
   "parent": "product.json",
   "context": {
-    "market": "indonesia"
+    "market": "id"
   },
   "sections": {
     "main": {
